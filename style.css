@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+}
+
+.card{
+    margin: auto;
+    height: 20vmax;
+    width: 15vmax;
+}
+.inner-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.front>img, .back>img{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.front {
+    background-color: red;
+    transform: rotateY(180deg);
+}
+.back {
+    background-color: blue;
+}
+
+
+@keyframes flip {
+    50% {
+        transform: rotateY(180deg);
+    }
+}
+
+.inner-card:hover {
+    animation: flip 3s infinite;
+}
