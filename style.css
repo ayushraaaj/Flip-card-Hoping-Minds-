@@ -1,3 +1,7 @@
+#details{
+    text-align: center;
+    margin-bottom: 3vmax;
+}
 .container{
     display: flex;
 }
